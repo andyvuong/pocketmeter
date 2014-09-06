@@ -15,7 +15,7 @@ pocketmeter is our proof of concept of a new system we believe could change the 
 We're a group of ambitious beginning hackers from different schools and backgrounds and we would love to talk to you!
 
 ###Team Members:
-Amit Rathi - (Wayne State University - Michigan)
-Michelle Zheng - (University of Illinois at Urbana-Champaign)
-Andy Vuong - (University of Illinois at Urbana-Champaign)
-Jonathan Scher - (High School Student - Pennslyvania)
+-Amit Rathi - (Wayne State University - Michigan)
+-Michelle Zheng - (University of Illinois at Urbana-Champaign)
+-Andy Vuong - (University of Illinois at Urbana-Champaign)
+-Jonathan Scher - (High School Student - Pennslyvania)
