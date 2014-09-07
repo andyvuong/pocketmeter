@@ -12,7 +12,7 @@ What we offer is a concept for a digital pay meter that you can pay versuses the
 
 
 ##A Changing World
-pocketmeter is our proof of concept of a new system we believe could change the way civilization handles paid parking. Always push for change. Keep Hacking!
+Push For Change is our proof of concept of a new system we believe could change the way civilization handles paid parking. Always push for change. Keep Hacking!
 
 ##About Us
 We're a group of ambitious beginning hackers from different schools and backgrounds and we would love to talk to you!
