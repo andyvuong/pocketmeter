@@ -11,11 +11,9 @@
     <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- Include the compiled Ratchet CSS -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link href="../resources/css/ratchet.css" rel="stylesheet">
-
-    <!-- Include the compiled Ratchet JS -->
     <script src="../resources/js/ratchet.js"></script>
   </head>
   <body>
@@ -25,55 +23,80 @@
       <h1 class="title">Push For Change</h1>
     </header>
 
-<p class="content-padded">Create an account with us!</p>   <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content">
+	<p class="content-padded">Create an account with us!</p>   <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    	<div class="content">
 
-<form class="input-group">
+	<form class="input-group">
  
- <div class="card">
-	<ul class="table-view center-text spacing-w-1">
-   	  <li class="table-view-cell center-text">User Registration Form</li>
-	</ul>
- </div>
- <div class="input-row">
-    <label>Username</label>
-    <input type="text" placeholder="username">
-  </div>
+ 	<div class="card">
+		<ul class="table-view center-text spacing-w-1">
+   	  	<li class="table-view-cell center-text">User Registration Form</li>
+		</ul>
+ 	</div>
+ 	<div class="input-row">
+    	<label>Username</label>
+    	<input id="id-username" type="text" placeholder="username">
+  	</div>
 
- <div class="input-row">
-    <label>Password</label>
-    <input type="password" placeholder="password">
-  </div>
+ 	<div class="input-row">
+    	<label>Password</label>
+    	<input id="id-password" type="password" placeholder="password">
+  	</div>
 
- <div class="input-row">
-    <label>Full name</label>
-    <input type="text" placeholder="first last">
-  </div>
+ 	<div class="input-row">
+    	<label>Full name</label>
+    	<input id="id-name" type="text" placeholder="first last">
+  	</div>
 
+ 	<div class="input-row">
+    	<label>Phone</label>
+    	<input id="id-phone" type="text" placeholder="phone number">
+  	</div>
 
-  <div class="input-row">
-    <label>Phone</label>
-    <input type="text" placeholder="phone number">
-  </div>
+  	<div class="input-row">
+    	<label>Email</label>
+    	<input id="id-email" type="email" placeholder="address">
+  	</div>
 
-  <div class="input-row">
-    <label>Email</label>
-    <input type="email" placeholder="address">
-  </div>
+ 	<div class="input-row">
+    	<label>License</label>
+    	<input id="id-license" type="text" placeholder="plate number">
+  	</div>
 
- <div class="input-row">
-    <label>License</label>
-    <input type="text" placeholder="Plate Number">
-  </div>
+  	<div class="input-row">
+    	<label>Vehicle</label>
+    	<input id="id-vnum" type="text" placeholder="registration #">
+  	</div>
+	<button id="submit" class="btn btn-positive btn-block spacing-up-5 spacing-w-1">Register</button>
+	</form>
+	</div>
 
-  <div class="input-row">
-    <label>VIN</label>
-    <input type="text" placeholder="VIN">
-  </div>
-	
-  <div class="input-row">
-    <label>Vehicle</label>
-    <input type="text" placeholder="Registration #">
-  </div>
-	<button class="btn btn-positive btn-block spacing-up-5 spacing-w-1">Register</button>
-</form>
+	<script>	
+		var url = "https://glaring-inferno-1887.firebaseio.com/#-JU2JXeuzTzUpLZ93hHc|4bc32f0d52ac19d851c678bf39848ab3";
+		var ref = new Firebase(url);
+
+		function funct(evt) 
+		{
+			var username = $('id-username').text();
+			var password = $('id-password').text();
+			var name = $('id-name').text();
+			var phone = $('id-phone').text();
+			var email = $('id-email').text();
+			var license = $('id-license').text();
+			var vnum = $('id-vnum').text();
+			
+			ref.set({ Username: username,
+					  Password: password,	
+					  Name: name,
+			 	 	  Phone: phone,
+					  Email: email
+					  License: license
+					  Vehicle: vnum });
+			evt.preventDefault();
+		}
+
+		var submit = document.getElementsById("submit")[0];
+		submit.onclick = funct;
+	</script>
+</body>
+</html>
