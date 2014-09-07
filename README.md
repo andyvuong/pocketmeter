@@ -1,11 +1,11 @@
-pocketmeter (temp name)
+Push For Change
 ===========
 
 #What
-pocketmeter offers a new way for paying for your car's street parking meter. Have you ever had to abruptly break from your plans just to pay a parking meter that's running out of time? We have and we think there's a better way. Imagine being pushed a notification straight from your mobile phone that the time on your meter is running out. Now imagine directly paying for that meter for more time from your phone! No need to walk away from that hot date, dinner party, or other lovely outings to pay that bothersome meter!
+Push For Change offers a new way for paying for your car's street parking meter. Have you ever had to abruptly break from your plans just to pay a parking meter that's running out of time? We have and we think there's a better way. Imagine being pushed a notification straight from your mobile phone that the time on your meter is running out. Now imagine directly paying for that meter for more time from your phone! No need to walk away from that hot date, dinner party, or other lovely outings to pay that bothersome meter!
 
 ##The Solution
-( secret for now :) )
+What we offer is a concept for a digital pay meter that you can pay versuses the physical meter at a parking spot. By allowing a digital payment, we hope to increase consumer conveninence and solve a prevalant problem in society today.
 
 
 ##A Changing World
