@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="../resources/css/ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="../resources/js/ratchet.js"></script>
+  </head>
+  <body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <h1 class="title">Push For Change</h1>
+    </header>
+
+<p class="content-padded">Create an account with us!</p>   <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+
+<form class="input-group">
+ 
+ <div class="card">
+	<ul class="table-view center-text spacing-w-1">
+   	  <li class="table-view-cell center-text">User Registration Form</li>
+	</ul>
+ </div>
+ <div class="input-row">
+    <label>Username</label>
+    <input type="text" placeholder="username">
+  </div>
+
+ <div class="input-row">
+    <label>Password</label>
+    <input type="password" placeholder="password">
+  </div>
+
+ <div class="input-row">
+    <label>Full name</label>
+    <input type="text" placeholder="first last">
+  </div>
+
+
+  <div class="input-row">
+    <label>Phone</label>
+    <input type="text" placeholder="phone number">
+  </div>
+
+  <div class="input-row">
+    <label>Email</label>
+    <input type="email" placeholder="address">
+  </div>
+
+ <div class="input-row">
+    <label>License</label>
+    <input type="text" placeholder="Plate Number">
+  </div>
+
+  <div class="input-row">
+    <label>VIN</label>
+    <input type="text" placeholder="VIN">
+  </div>
+	
+  <div class="input-row">
+    <label>Vehicle</label>
+    <input type="text" placeholder="Registration #">
+  </div>
+	<button class="btn btn-positive btn-block spacing-up-5 spacing-w-1">Register</button>
+</form>
