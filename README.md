@@ -1,6 +1,7 @@
 Push For Change
 ===========
 
+Check out on your mobile phone:
 http://andyvuong.github.io/pocketmeter/
 
 #What
