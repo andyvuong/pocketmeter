@@ -1432,3 +1432,28 @@ select {
 .icon-left:before {
   content: '\e822';
 }
+
+.center-text {
+	text-align: center;
+}
+
+.spacing-down-5 {
+	margin-bottom: 5%;
+}
+
+.spacing-up-5 {
+	margin-top: 5%;
+}
+
+.spacing-up-15 {
+	margin-top: 15%;
+}
+
+.spacing-w-1 {
+	text-align:center;
+	left: 0;
+	right:0;
+	margin-left:5%;
+	margin-right:5%;
+	width: 90%;
+}
