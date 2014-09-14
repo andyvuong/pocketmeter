@@ -25,33 +25,35 @@
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
-      <p class="content-padded spacing-up-5">Hello! Thank you for using our digital parking service. Please let us know how we can improve your experience.</p>
-      
-
 	  <div class="card spacing-up-15">
         <ul class="table-view">
-          
-		<a class="push-right" href="auth/registration.html" data-transition="slide-in">
-			<li class="table-view-cell">    
-			<span class="media-object pull-left icon icon-plus"></span>
-              <strong>Register</strong>
-            </a>
-          </li>
-          <li class="table-view-cell">
-            <a class="push-right" href="#login-modal">
-			<span class="media-object pull-left icon icon-person"></span>
+            <li class="table-view-cell">
+              <a class="push-right" href="#login-modal">
+			  <span class="media-object pull-left icon icon-person"></span>
               <strong>Login</strong>
             </a>
           </li>
           <li class="table-view-cell">
-            <a class="push-right" href="auth/credits.html" data-transition="slide-in">
+            <a class="push-right" href="#regist-modal">
+			<span class="media-object pull-left icon icon-compose"></span>
+              <strong>Registration</strong>
+            </a>
+          </li>
+          <li class="table-view-cell">
+            <a class="push-right" href="#about-modal" data-transition="slide-in">
 			<span class="media-object pull-left icon icon-star-filled"></span>
-              <strong>Credits</strong>
+              <strong>About</strong>
             </a>
           </li>
         </ul>
-      </div>
+      </div> <!-- End menu options -->
+        
+      <div class="bar bar-standard bar-footer">
+        <button class="btn btn-block">powered by <a href="http://goratchet.com">Ratchet</a></button>
+      </div> <!-- end footer -->
     </div>
+    
+    <!-- Modals -->
 	<div id="login-modal" class="modal">
 		<header class="bar bar-nav" class="modal">
 			<a class="icon icon-close pull-right" href="#login-modal"></a>
@@ -64,8 +66,137 @@
 				<button class="btn btn-primary btn-block">Submit</button>
 			</form>
 		</div>
-	</div>
-	</head>
+	</div><!-- End Login Modal -->
+    
+    <div id="regist-modal" class="modal">
+		<header class="bar bar-nav" class="modal">
+			<a class="icon icon-close pull-right" href="#regist-modal"></a>
+			<h1 class="title">Register</h1>
+		</header>
+    	<div class="content">
+            <form class="input-group"> 
+                <div class="input-row">
+                    <label>Email</label>
+                    <input id="id-email" type="email" placeholder="address">
+                </div>
+
+                <div class="input-row">
+                    <label>Password</label>
+                    <input id="id-password" type="password" placeholder="password">
+                </div>
+
+                <div class="input-row">
+                    <label>First</label>
+                    <input id="id-fname" type="text" placeholder="first name">
+                </div>
+                
+                <div class="input-row">
+                    <label>Last</label>
+                    <input id="id-lname" type="text" placeholder="last name">
+                </div>
+
+                <div class="input-row">
+                    <label>Phone</label>
+                    <input id="id-phone" type="text" placeholder="phone number">
+                </div>
+
+                <div class="input-row">
+                    <label>License</label>
+                    <input id="id-plate" type="text" placeholder="plate number">
+                </div>
+                
+                <button id="submit" class="btn btn-positive btn-block spacing-up-5 spacing-w-1">Register</button>
+            </form>
+		</div>
+	</div><!-- End Registration Modal -->
+    
+    <div id="about-modal" class="modal">
+        <header class="bar bar-nav" class="modal">
+			<a class="icon icon-close pull-right" href="#about-modal"></a>
+			<h1 class="title">About</h1>
+		</header>
+    	<div class="content">
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left fa fa-wrench fa-2x"></span>
+                    <div class="media-body">
+                        MHacks
+                        <p>This project was started at MHacks IV and later completed after the Hackathon. Three university students and one high school student
+                        came together as strangers to one another and built this mobile web app.
+                        </p>
+                    </div>
+                </li>
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left fa fa-group fa-2x"></span>
+                    <div class="media-body">
+                        Developers
+                        <p>Andy Vuong - UX/Backend</p>
+                        <p>Michelle Zheng - UX</p>
+                        <p>Amit Rathi - Backend</p>
+                        <p>Jonathan Scher - Web</p>
+                    </div>
+                </li>
+            </ul>
+		</div>
+	</div><!-- End About Modal -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+      	
+    <script>
+        var firebaseRef = new Firebase("https://pocketmeter.firebaseio.com");
+        
+        var authClient = new FirebaseSimpleLogin(firebaseRef, function(error,user){
+            if(error) {
+                console.log(error);
+            }
+            else if(user) {
+                console.log("User ID: ");
+            }
+            else {
+                // user logged out currently
+            }
+        });
+        
+        
+        $("#submit").click( function() {
+            var userRef = firebaseRef.child("users");
+                
+            var email = $("#id-email").val();
+            var password = $("#id-password").val();
+
+            /**
+            * Create a new user
+            */
+            authClient.createUser(email, password, function(error, user) {
+                if(error == null) {
+                    console.log("User created successfully", user);
+                } 
+                else {
+                    console.log("Error creating user:", error);
+                }
+            });
+            
+            
+            
+            
+            
+            /*
+            userRef.push({
+                email: $("#id-email").val(),
+                password: $("#id-password").val(),
+                fname: $("#id-fname").val(),
+                lname: $("#id-lname").val(),
+                phone: $("#id-phone").val(),
+                plateNum: $("#id-plate").val()
+            }); */
+        });
+        
+       
+        
+    </script>
+    <!-- end scripts -->
   </body>
 </html>
 
