@@ -60,10 +60,10 @@
 			<h1 class="title">Log In</h1>
 		</header>
     	<div class="content">
-			<form class="spacing-w-1 spacing-up-5">
-				<input type="search" placeholder="email">
-				<input type="search" placeholder="password">
-				<button class="btn btn-primary btn-block">Submit</button>
+			<form action="core/home.html" class="spacing-w-1 spacing-up-5">
+				<input type="search" placeholder="email" value="Ada Seen">
+				<input type="password" placeholder="password" value="password">
+                <button class="btn btn-primary btn-block">Log In</button>
 			</form>
 		</div>
 	</div><!-- End Login Modal -->
@@ -74,35 +74,35 @@
 			<h1 class="title">Register</h1>
 		</header>
     	<div class="content">
-            <form class="input-group"> 
+            <form action="core/home.html" class="input-group"> 
                 <div class="input-row">
                     <label>Email</label>
-                    <input id="id-email" type="email" placeholder="address">
+                    <input id="id-email" type="email" placeholder="address" value="hacker@hackathons.edu">
                 </div>
 
                 <div class="input-row">
                     <label>Password</label>
-                    <input id="id-password" type="password" placeholder="password">
+                    <input id="id-password" type="password" placeholder="password" value="password">
                 </div>
 
                 <div class="input-row">
                     <label>First</label>
-                    <input id="id-fname" type="text" placeholder="first name">
+                    <input id="id-fname" type="text" placeholder="first name" value="Ada">
                 </div>
                 
                 <div class="input-row">
                     <label>Last</label>
-                    <input id="id-lname" type="text" placeholder="last name">
+                    <input id="id-lname" type="text" placeholder="last name" value="Seen">
                 </div>
 
                 <div class="input-row">
                     <label>Phone</label>
-                    <input id="id-phone" type="text" placeholder="phone number">
+                    <input id="id-phone" type="text" placeholder="phone number" value="17729810912">
                 </div>
 
                 <div class="input-row">
                     <label>License</label>
-                    <input id="id-plate" type="text" placeholder="plate number">
+                    <input id="id-plate" type="text" placeholder="plate number" value="9J23SAJ21321421D">
                 </div>
                 
                 <button id="submit" class="btn btn-positive btn-block spacing-up-5 spacing-w-1">Register</button>
@@ -136,6 +136,13 @@
                         <p>Jonathan Scher - Web</p>
                     </div>
                 </li>
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left fa fa-graduation-cap fa-2x"></span>
+                    <div class="media-body">
+                        Representing
+                        <p>UIUC, Wayne State University, and HS Hackers!</p>
+                    </div>
+                </li>
             </ul>
 		</div>
 	</div><!-- End About Modal -->
@@ -145,7 +152,7 @@
     <script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
       	
     <script>
-        var firebaseRef = new Firebase("https://pocketmeter.firebaseio.com");
+        var firebaseRef = new Firebase("FIREBASE");
         
         var authClient = new FirebaseSimpleLogin(firebaseRef, function(error,user){
             if(error) {
