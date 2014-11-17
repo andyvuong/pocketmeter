@@ -24,23 +24,35 @@
 			<a href="#history-modal" class="control-item"><span class="fa fa-book fa-2x"></span></a>
 		</div>	
 		<ul class="table-view">
-
+			<li class="media table-view-cell table-view-divider">	
+				<span class="media-object pull-left fa fa-calendar fa-2x"></span>
+                    <div class="media-body">
+                        <p>November 15, 2015 - 3:59 pm</p>
+                    </div>
+			</li>
+            
 			<!-- Time Remaining Display -->
-			<li class="table-view-cell table-view-divider">	
-				<span class="fa fa-clock-o fa-2x"></span>
-				<div id="remainingtime"></div>
+			<li class="media table-view-cell table-view-divider">	
+				<span class="media-object pull-left fa fa-clock-o fa-2x"></span>
+                <div class="media-body">
+                    <p>28 Minutes Remaining</p>
+                </div>
 			</li>
 			
 			<!-- UII section -->
-			<li class="table-view-cell media">
-				<span class="fa fa-car fa-2x"></span>
-				<div id="uii"></div>	
+			<li class="media table-view-cell media">
+				<span class="media-object pull-left fa fa-car fa-2x"></span>
+                <div class="media-body">
+                    <p>Parked on Chicago and State (SE Corner)</p>
+                </div>
 			</li>
 
 			<!-- Alarm Time Set -->
 			<li class="table-view-cell media">
-				<span class="fa fa-bell fa-2x"></span>
-				<div id="update"></div>
+				<span class="media-object pull-left fa fa-bell fa-2x"></span>
+                <div class="media-body">
+                    <p>Alarm Set for 4:30 pm</p>
+                </div>
 			</li>
 			
 			<!-- Current Time of Day -->
@@ -48,11 +60,8 @@
 			
 		</ul>
 			<!-- Check IN -->
-            <div class="bar bar-standard bar-footer-secondary">
-                
-        	</div>
 			<div class="bar bar-standard bar-footer-secondary">
-          		<a href="payment.html" data-transition="slide-in">
+          		<a href="#" data-transition="slide-in">
           			<button class="btn-block"><span class="fa fa-money fa-2x"></span></button>
 				</a>
         	</div>
@@ -109,7 +118,55 @@
 			<h1 class="title">History</h1>
 		</header>
     	<div class="content">
-
+            <ul class="table-view">
+                <li class="table-view-cell table-view-divider">	
+                    <p>Today's Date is: November 15, 2015</p>
+			     </li>
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left fa fa-clock-o fa-2x"></span>
+                    <div class="media-body">
+                        <p>Alert (3:27 pm): 15 Minutes Remaining in Meter.</p>
+                    </div>
+                </li>
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left fa fa-dollar fa-2x"></span>
+                    <div class="media-body">
+                        <p>Alert (2:46 pm): A payment of $1.25 was made.</p>
+                    </div>
+                </li>
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left fa fa-dollar fa-2x"></span>
+                    <div class="media-body">
+                        <p>Alert (1:07 pm): A payment of $2.25 was made.</p>
+                    </div>
+                </li>
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left fa fa-exclamation-circle fa-2x"></span>
+                    <div class="media-body">
+                        <p>Alert (12:45 pm): 0 Minutes Remaining in Meter!!!</p>
+                    </div>
+                </li>
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left fa fa-clock-o fa-2x"></span>
+                    <div class="media-body">
+                        <p>Alert (12:15 pm): 30 Minutes Remaining in Meter.</p>
+                    </div>
+                </li>
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left fa fa-dollar fa-2x"></span>
+                    <div class="media-body">
+                        <p>Alert (11:30 am): A payment of $2.00 was made.</p>
+                    </div>
+                </li>
+            </ul>
+			<div class="bar bar-standard bar-footer-secondary">
+          		<a href="payment.html" data-transition="slide-in">
+          			<button class="btn-block">View Account Details Online</button>
+				</a>
+        	</div>
+            <div class="bar bar-standard bar-footer">
+                <button class="btn btn-block">powered by <a href="http://goratchet.com">Ratchet</a></button>
+            </div> <!-- end footer -->
 		</div>
 	</div><!-- End History Modal -->
   </body>
